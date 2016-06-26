@@ -1,0 +1,32 @@
+/*  IE 6 */
+#horni_lista {
+  background-color: transparent;
+}
+#menu,strong#logo {
+  margin-top: -7px;
+}
+#menu li a span, strong#logo span {
+  cursor: hand; /* není validní, ale protože je toto pouze v podmíněném komentáři, tak to snad nevadí */
+}
+#menu li a#posledni_odkaz span {
+  background: url("../images/pozadi_menu_rohy.png") no-repeat 0px -51px;
+}
+#menu li  a#posledni_odkaz span {
+  margin-right: -1px;
+}
+
+#drobeckova_navigace {
+  line-height: 22px;
+}
+#text img.obrazek_obtekan_v_textu {
+  margin-bottom: 0;
+}
+#text a.odkaz_obtekan_v_textu {
+  float: left;
+  margin: 0 0.5 em 0.5em 0;
+  border: 1px solid black;
+  padding: 0;
+}
+
+
+

@@ -1,0 +1,32 @@
+#menu, #pata, .nezobrazit, #drobeckova_navigace {
+  display: none;
+}
+a {
+  color: #8a0000;
+  text-decoration: none;
+}
+#text a.odkaz_obtekan_v_textu {
+  float: left;
+  margin: 0 1em 0.5em 0;
+}
+#pravy_layout {
+  clear: both;
+}
+.cistic {
+  display: block;
+  clear: both;
+  border: none;
+  visibility: hidden;
+}
+strong#logo {
+  display: none;
+}
+h1 {
+  border-bottom: 1px dotted black;
+}
+table {
+  border-collapse: collapse;
+}
+td,th {
+  border: 1px solid black;
+}

@@ -1,0 +1,563 @@
+/* Obecné */
+body {
+	background: url("../images/pozadi.jpg") #244564;
+	text-align: center;
+	font-family: Arial, "Arial CE", "Helvetica CE", helvetica, sans-serif;
+}
+
+html,body,ol,ul,li,a,img,p,h2,h3,h1,#menu,#menu li,div {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: underline;
+} /*pro jistotu*/
+a:hover {
+	text-decoration: none;
+}
+
+.nezobrazit {
+	display: none;
+}
+
+.cistic {
+	display: block;
+	clear: both;
+	border: none;
+	visibility: hidden;
+}
+
+.nobr {
+	white-space: nowrap;
+}
+
+h1,h2 {
+	font-weight: normal
+}
+
+.right {
+	text-align: right;
+	display: block;
+}
+
+.center {
+	text-align: center
+}
+
+.error {
+	color: red;
+}
+
+/* horní lišta*/
+#horni_lista {
+	background: url("../images/pozadi_lista.gif") #183d60 repeat-x;
+	height: 11px;
+	width: 100%;
+	line-height: 11px;
+}
+
+#obal {
+	width: 880px;
+	margin: 0 auto;
+	background: url("../images/pozadi_kun_sachovnice.jpg") no-repeat 209px
+		51px;
+	position: relative;
+	text-align: left;
+	padding-bottom: 30px;
+}
+
+/* klikaci logo */
+h1#logo {
+	display: block;
+	height: 73px;
+	width: 208px;
+	position: relative;
+	top: 41px;
+	left: 0;
+	font-size: 120%;
+	text-align: center;
+}
+
+h1#logo a {
+	color: white;
+	display: block;
+	height: 73px;
+	width: 208px;
+	position: relative;
+	text-align: center;
+	line-height: 1.2em;
+	overflow: hidden;
+}
+
+h1#logo a span {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	height: 73px;
+	width: 208px;
+	background: url("../images/logo.png") no-repeat top left;
+	cursor: pointer;
+}
+
+h1#logo a:hover {
+	color: #860000;
+	background: white;
+	outline: none;
+} /* Kvuli IE, jinak nevrati na normalni stav */
+
+/* LOGIN */
+span#login {
+	position: absolute;
+	right: 10px;
+	top: 128px;
+	z-index: 3;
+}
+
+#login a,span#login {
+	color: white;
+}
+/* MENU */
+#menu {
+	height: 51px;
+	background: url("../images/pozadi_menu.gif") #1c1d1e 0 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	z-index: 2; /*pro jistotu, aby bylo vidět*/
+}
+
+#menu li {
+	list-style-type: none;
+	display: block;
+	float: left;
+}
+
+#menu li a {
+	color: white;
+	text-decoration: none;
+	display: block;
+	line-height: 51px;
+	height: 51px;
+	padding: 0 10px;
+	float: left; /* Kvůli IE6 */
+}
+
+#menu li a:hover span {
+	text-decoration: none;
+}
+
+#menu li a:hover,#menu li a:focus {
+	background: url("../images/pozadi_menu.gif") #860000 0 51px;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	padding: 0 9px;
+	outline: none;
+}
+
+#menu li a:active {
+	background: url("../images/pozadi_menu.gif") #d1d3d9 0 102px !important;
+	color: black !important;
+}
+
+#menu li a#prvni_odkaz span,#menu li  a#posledni_odkaz span {
+	display: block;
+	width: 10px;
+	height: 51px;
+}
+
+#menu li a#prvni_odkaz span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url("../images/pozadi_menu_rohy.png") no-repeat 0 0;
+}
+
+#menu li a#posledni_odkaz span {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: url("../images/pozadi_menu_rohy.png") no-repeat right -51px;
+}
+
+#menu li a#prvni_odkaz:hover,#menu li a#prvni_odkaz:active,#menu li a#prvni_odkaz:focus
+	{
+	border-left: none;
+	padding: 0 9px 0 10px;
+}
+
+#menu li a#posledni_odkaz:hover,#menu li a#posledni_odkaz:active,#menu li a#posledni_odkaz:focus
+	{
+	border-right: none;
+	padding: 0 10px 0 9px;
+}
+
+#menu li a#prvni_odkaz:hover span,#menu li a#prvni_odkaz:focus span {
+	background: url("../images/pozadi_menu_rohy.png") no-repeat 0 -102px
+		!important;
+}
+
+#menu li a#posledni_odkaz:hover span,#menu li a#posledni_odkaz:focus span
+	{
+	background: url("../images/pozadi_menu_rohy.png") no-repeat 0 -153px
+		!important;
+}
+
+#menu li a#prvni_odkaz:active span,#menu li a#prvni_odkaz.nynejsi_stranka span
+	{
+	background: url("../images/pozadi_menu_rohy.png") no-repeat 0 -204px;
+}
+
+#menu li a#posledni_odkaz:active span,#menu li a#posledni_odkaz.nynejsi_stranka span
+	{
+	background: url("../images/pozadi_menu_rohy.png") no-repeat 0 -255px;
+}
+
+#menu li a#prvni_odkaz:active span {
+	background: url("../images/pozadi_menu_rohy.png") no-repeat 0 -204px
+		!important;
+}
+
+#menu li a#posledni_odkaz:active span {
+	background: url("../images/pozadi_menu_rohy.png") no-repeat 0 -255px
+		!important;
+}
+
+#menu li a.nynejsi_stranka {
+	background: url("../images/pozadi_menu.gif") #d1d3d9 0 102px;
+	color: black;
+}
+
+#menu li a.nynejsi_stranka:hover,#menu li a.nynejsi_stranka:focus {
+	color: white;
+	background: url("../images/pozadi_menu.gif") #860000 0 -102px;
+}
+
+/*  Stredni cast */
+#obal_text {
+	background: white;
+	border: 1px solid black;
+	position: relative;
+	margin-top: 85px;
+}
+
+#obal_text2 {
+	margin: 3px;
+	border: 1px solid #93a3b3;
+	padding: 23px;
+	position: relative;
+}
+
+/* drobeckova navigace*/
+#drobeckova_navigace_obal {
+	border: 1px solid #2f4e6d;
+	position: relative;
+	padding: 2px;
+}
+
+#drobeckova_navigace {
+	background: #244565;
+	padding: 10px;
+	height: 20px;
+	position: relative;
+}
+
+#drobeckova_navigace p {
+	color: white;
+	font-size: 84%;
+}
+
+#drobeckova_navigace a {
+	color: white;
+	padding: 0 0.1em;
+}
+
+#drobeckova_navigace a:hover {
+	color: #244565;
+	background: white;
+}
+
+/* text - div*/
+#text_stranky {
+	width: 529px;
+	float: left;
+	position: relative;
+	padding-right: 20px;
+	font-size: 93%;
+	line-height: 1.3em;
+}
+
+#text_stranky {
+	
+}
+
+/* pravy layout */
+#pravy_layout {
+	float: right;
+	width: 275px;
+	position: relative;
+	margin-top: -43px;
+	text-align: center;
+}
+
+#novinky {
+	margin: 0 0 20px 0;
+	font-size: 100%;
+	text-align: center;
+	background: url("../images/pozadi_novinky.gif") repeat-y left #2e5274;
+	width: 272px;
+	width: 222px;
+	height: 40px;
+	line-height: 40px;
+	color: white;
+	position: relative;
+	border: 0;
+}
+
+.sipka {
+	background: url("../images/pozadi_novinky_obrazky.gif");
+	height: 17px;
+	width: 13px;
+	overflow: hidden;
+	display: block;
+	position: absolute;
+	left: 25px;
+	top: 12px;
+}
+
+#strelec {
+	background: url("../images/pozadi_novinky_obrazky.gif") 0 -18px;;
+	position: absolute;
+	right: 25px;
+	top: 2px;
+	height: 37px;
+	width: 16px;
+}
+
+#kun {
+	background: url("../images/pozadi_novinky_obrazky.gif") 0 -59px;;
+	position: absolute;
+	right: 25px;
+	top: 2px;
+	height: 36px;
+	width: 23px;
+}
+
+#pravy_layout li {
+	font-size: 90%;
+	padding: 0 1em;
+	margin: 0.4em 0;
+	text-align: left;
+}
+
+#pravy_layout ul li {
+	list-style-type: none;
+}
+
+#pravy_layout ol li {
+	margin-left: 35px;
+}
+
+/* dalsi casti v pravem layoutu */
+.pravy_layout_div {
+	border: 1px solid #2e5274;
+	text-align: center;
+	padding: 2px;
+	margin: 20px 0 20px 0;
+}
+
+.pravy_layout_nadpis {
+	color: white;
+	position: relative;
+	background: #2e5274;
+	width: 269px;
+	width: 219px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 100%;
+	margin: 0;
+	border: 0;
+	text-align: center;
+}
+
+ol#soupiska a {
+	margin-left: -8px;
+}
+
+/* pata */
+#pata {
+	padding: 2em 0 2em 0;
+	text-align: right;
+	color: white;
+	font-size: 80%;
+	line-height: 1.4em;
+}
+
+#pata a {
+	color: white;
+	padding: 0 0.1em;
+}
+
+#pata a:hover {
+	color: #294b6b;
+	background: white;
+}
+
+/* Text */
+#text_stranky h2 {
+	color: #8a0000;
+	line-height: 1.25em;
+	border-bottom: 1px dashed #8a0000;
+	margin: 0.8em 0 0.4em 0;
+	font-size: 160%;
+	text-align: left;
+}
+
+#text_stranky h3 {
+	color: #8a0000;
+	line-height: 1.25em;
+	margin: 0.8em 0 0.4em 0;
+	font-size: 140%;
+	text-align: left;
+	border-bottom: 1px dashed #8a0000;
+	font-size: 123%;
+	margin: 0 0 0.7em 0;
+}
+
+#text_stranky p {
+	margin-bottom: 1em;
+}
+
+#text_stranky a,ol#soupiska a {
+	color: #8a0000;
+	padding: 0 0.2em 0 0.2em;
+}
+
+#text_stranky a:hover,ol#soupiska a:hover {
+	background: #8a0000;
+	color: white;
+}
+
+#text_stranky a.odkaz_obtekan_v_textu {
+	float: left;
+	margin: 0 10px 10px 0;
+	border: 1px solid black;
+	padding: 0;
+}
+
+#text_stranky img.obrazek_obtekan_v_textu {
+	margin: 3px 3px -1px 3px;
+}
+
+#text_stranky ul,#text_stranky ol {
+	margin-left: 60px;
+}
+
+#text_stranky ul li {
+	list-style-type: square;
+}
+
+/* tabulka pro statistiku */
+table.tabulka_partie {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+	/*   border-bottom: 1px solid #8a0000; */
+}
+
+table.tabulka_partie th {
+	text-align: center;
+	color: white;
+	padding: 0.4em 0;
+	font-weight: normal;
+}
+
+table.tabulka_partie thead {
+	/* 	background: #8a0000; */
+	background: #183d60;
+}
+
+table.tabulka_partie a {
+	color: black !important;
+}
+
+table.tabulka_partie a:hover {
+	background: none !important;
+	text-decoration: none !important;
+}
+
+table.tabulka_partie td {
+	text-align: center;
+	padding: 0.2em 0;
+}
+
+table.tabulka_partie td.jmeno {
+	text-align: left;
+	padding: 0.3em 0 0.3em 0.3em;
+}
+
+table.tabulka_partie tr.suda {
+	background: #efefef;
+}
+
+/* obecna tabulka */
+table.tabulka td,table.tabulka th {
+	text-align: left;
+	height: 1.8em;
+	width: 50%;
+}
+
+table.tabulka {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+table.tabulka tr.licha {
+	background: #efefef;
+}
+
+.text_vlevo {
+	text-align: left !important;
+	padding-left: 1em !important;
+}
+
+div.komentar {
+	background: #efefef;
+	padding: 10px;
+	margin-bottom: 0.4em;
+}
+
+.zahlaviKomentare {
+	padding-bottom: 4px;
+	border-bottom: 1px solid #cacaca;
+}
+
+.datumKomentare {
+	float: right;
+}
+
+/* TODO odstranen pravy layout*/
+#pravy_layout {
+	width: 0 !important;
+	display: none !important;
+}
+
+#text_stranky {
+	width: 100% !important;
+}
+
+#obal {
+	width: 780px !important;
+	width: 880px !important;
+	width: 830px !important;
+	background: url("../images/pozadi_kun_sachovnice.jpg") no-repeat 259px
+		51px !important; 
+		
+}
+
+#obal_text {
+	box-shadow: 0px 0px 15px #0f2b45;
+}
